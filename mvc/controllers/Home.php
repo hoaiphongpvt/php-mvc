@@ -1,7 +1,8 @@
 <?php
-    class Home {
+    class Home extends Controller {
         static function SayHi() {
-            echo "Home - SayHi";
+            $sv = self::model("SinhVienModel");
+            echo $sv->GetSinhVien();
         }
 
         static function Show() {
