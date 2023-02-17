@@ -6,8 +6,8 @@
             return new $model;
         }
 
-        public function view($view) {
-
+        public static function view($view, $data = []) {
+            require_once "./mvc/views/".$view.".php";
         }
     }
 ?>

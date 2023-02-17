@@ -5,8 +5,10 @@
             echo $sv->GetSinhVien();
         }
 
-        static function Show() {
-            echo "Home - Show";
+        static function Show($a, $b) {
+            $sv = self::model("SinhVienModel");
+            $tong =  $sv->Tong($a, $b);
+            self::view("aodep", ["Number"=>$tong, "Page"=>"contact"]);
         }
     }
 ?>
