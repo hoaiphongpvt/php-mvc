@@ -8,7 +8,11 @@
         static function Show($a, $b) {
             $sv = self::model("SinhVienModel");
             $tong =  $sv->Tong($a, $b);
-            self::view("aodep", ["Number"=>$tong, "Page"=>"contact"]);
+            self::view("aodep", [
+                "Number"=>$tong, 
+                "Page"=>"news",
+                "SV"=>$sv->SinhVien()
+            ]);
         }
     }
 ?>
